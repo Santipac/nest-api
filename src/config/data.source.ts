@@ -3,9 +3,9 @@ import { DataSource, DataSourceOptions } from 'typeorm';
 import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
 
 ConfigModule.forRoot({
-    envFilePath: `.env.${process.env.NODE_ENV}`.trim(),
-})
-const configService = new ConfigService()
+  envFilePath: `.env.${process.env.NODE_ENV}`.trim(),
+});
+const configService = new ConfigService();
 export const DataSourceConfig: DataSourceOptions = {
   type: 'postgres',
   host: configService.get('DB_HOST'),
