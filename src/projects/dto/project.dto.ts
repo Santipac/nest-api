@@ -7,6 +7,6 @@ export class ProjectDTO {
 
     @IsNotEmpty()
     @IsString()
-    descrpition: string;
+    description: string;
 }
 export type UpdateProjectDTO = Partial<ProjectDTO>

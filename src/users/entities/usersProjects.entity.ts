@@ -11,6 +11,7 @@ export class UsersProjectsEntity extends BaseEntity {
 
   @ManyToOne(() => UsersEntity, (user) => user.projectsIncludes)
   user: UsersEntity
+
   @ManyToOne(() => ProjectsEntity, (project) => project.usersIncludes)
   project: ProjectsEntity
 }
